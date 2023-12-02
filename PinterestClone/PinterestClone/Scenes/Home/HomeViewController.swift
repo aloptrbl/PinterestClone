@@ -10,7 +10,7 @@ import Kingfisher
 
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, CHTCollectionViewDelegateWaterfallLayout {
     
-    let movieList = movies
+    var movieList = [Movie]()
     
     // MARK: Outlets
     @IBOutlet weak var postCollectionView: UICollectionView!
@@ -32,21 +32,18 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         //Register nibs
         let nib = UINib(nibName: "PostCollectionViewCell", bundle: nil)
         postCollectionView.register(nib, forCellWithReuseIdentifier: "PostCollectionViewCell")
-        
-      
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.getHomeFeedList()
     }
     
     //MARK: - CollectionView Delegate
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cellWidth = collectionView.frame.width
-        let indexPath = IndexPath(item: indexPath.item, section: 0)
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostCollectionViewCell", for: indexPath) as! PostCollectionViewCell
 
-        let labelSize = cell.titleLabel.text?.size(withAttributes: [NSAttributedString.Key.font: cell.titleLabel.font as Any]) ?? CGSize.zero
-        let labelHeight = labelSize.height
-        let imageHeight = cell.imageView.image?.size.height ?? 50 
-
-        return CGSize(width: cellWidth, height: collectionView.frame.height + imageHeight)
+        return CGSize(width: cellWidth, height: collectionView.frame.height)
       }
     
     
@@ -71,10 +68,19 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         cell.layer.shadowOffset = CGSize(width: 0, height: 1)
         cell.layer.shadowOpacity = 0.1
         cell.layer.shadowRadius = 10
-
         cell.configureCell(movie: movieList[indexPath.row])
         
         return cell
+    }
+    
+    // MARK: Private Methods
+    func getHomeFeedList() {
+        let _ = HomeFeedAPI(search: "batman", page: "1") {moviesArr in 
+            if let movies = moviesArr {
+                self.movieList = movies
+                self.postCollectionView.reloadData()
+            }
+        }
     }
     
 

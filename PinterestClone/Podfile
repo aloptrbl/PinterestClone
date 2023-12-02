@@ -6,8 +6,9 @@ target 'PinterestClone' do
   use_frameworks!
 
   # Pods for PinterestClone
-pod 'Alamofire'
+  pod 'Alamofire'
   pod 'Kingfisher', '~> 7.0'
+  pod 'Cosmos', '~> 23.0'
 
   target 'PinterestCloneTests' do
     inherit! :search_paths

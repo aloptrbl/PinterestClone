@@ -16,6 +16,5 @@ class Configs {
     }()
     
     // MARK: Configurable Properties
-    private(set) public var baseURL = ""
-    private(set) public var apiKey = ""
+    private(set) public var baseURL = "http://www.omdbapi.com/?apikey=38b11b69"
 }

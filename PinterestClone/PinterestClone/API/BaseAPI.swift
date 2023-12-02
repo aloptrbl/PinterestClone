@@ -6,16 +6,16 @@
 //
 
 import Foundation
-//import Alamofire
+import Alamofire
 
 class BaseAPI {
     // Singleton instance
     static let shared = BaseAPI()
-    let baseURL = Configs.sharedInstance.baseURL
+    var baseURL = Configs.sharedInstance.baseURL
 
     // MARK: API Request
-//    func request(endpoint: String, method: HTTPMethod, parameters: Parameters? = nil, encoding: ParameterEncoding = JSONEncoding.default, headers: HTTPHeaders? = nil) -> DataRequest {
-//        return AF.request(baseURL + endpoint, method: method, parameters: parameters, encoding: encoding, headers: headers)
-//    }
+    func request(endpoint: String, method: HTTPMethod, parameters: Parameters? = nil, encoding: ParameterEncoding = JSONEncoding.default, headers: HTTPHeaders? = nil) -> DataRequest {
+        return AF.request(baseURL + endpoint, method: method, parameters: parameters, encoding: encoding, headers: headers)
+    }
 }
 

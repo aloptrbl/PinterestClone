@@ -35,7 +35,7 @@ class PostCollectionViewCell: UICollectionViewCell {
     
     // MARK: Configure Cell
     func configureCell(movie: Movie) {
-        let imageUrl = URL(string: "https://www.dvdsreleasedates.com/posters/800/O/Oppenheimer-2023-movie-poster.jpg")
+        let imageUrl = URL(string: movie.poster)
         self.imageView.kf.setImage(with: imageUrl) { result in
             switch result {
             case .success(_):
@@ -47,10 +47,10 @@ class PostCollectionViewCell: UICollectionViewCell {
             }
         }
         self.titleLabel.text = movie.title
-        self.totalWatchingLabel.text = "\(movie.totalWatchingTime) min"
-        self.genreLabel.text = movie.genres[0].uppercased()
+        self.totalWatchingLabel.text = "\(movie.imdbID)"
+        self.genreLabel.text = movie.type.uppercased()
         self.yearLabel.text = "\(movie.year)"
-        self.descriptionLabel.text = "\(movie.shortDescription)"
+        self.descriptionLabel.text = "\(movie.year)"
         self.invalidateIntrinsicContentSize()
     }
 
