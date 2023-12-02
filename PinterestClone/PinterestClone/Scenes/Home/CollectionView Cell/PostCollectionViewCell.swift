@@ -15,7 +15,6 @@ class PostCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var totalWatchingLabel: UILabel!
     @IBOutlet weak var genreLabel: UILabel!
     @IBOutlet weak var yearLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
     private let gradientLayer = CAGradientLayer()
     var onImageDownloaded: (() -> Void)?
 
@@ -50,7 +49,6 @@ class PostCollectionViewCell: UICollectionViewCell {
         self.totalWatchingLabel.text = "\(movie.imdbID)"
         self.genreLabel.text = movie.type.uppercased()
         self.yearLabel.text = "\(movie.year)"
-        self.descriptionLabel.text = "\(movie.year)"
         self.invalidateIntrinsicContentSize()
     }
 

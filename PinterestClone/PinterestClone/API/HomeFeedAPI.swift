@@ -32,8 +32,17 @@ class HomeFeedAPI: BaseAPI {
             case .success(let value):
                 let jsonData = response.data
                 let decoder = JSONDecoder()
-                let movieData = try! decoder.decode(HomeFeed.self, from: jsonData!)
-                completion?(movieData.search)
+                do {
+                    let movieData = try decoder.decode(HomeFeed.self, from: jsonData!)
+                    if movieData.search.isEmpty {
+                
+                    } else {
+                        completion?(movieData.search)
+                    }
+                } catch {
+                    print("Error decoding JSON: \(error)")
+                }
+
             case .failure(let error):
                 print(error)
             }

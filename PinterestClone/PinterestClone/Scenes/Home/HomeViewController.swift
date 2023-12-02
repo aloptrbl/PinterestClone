@@ -10,18 +10,24 @@ import Kingfisher
 
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, CHTCollectionViewDelegateWaterfallLayout {
     
-    var movieList = [Movie]()
-    
     // MARK: Outlets
     @IBOutlet weak var postCollectionView: UICollectionView!
+    
+    // MARK: Variables
+    var movieList = [Movie]()
+    var page = 1
+    let refreshControl = UIRefreshControl()
     
     // MARK: View Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Attach datasource and delegate
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        
+        // Attach datasource, refresh control and delegate
         postCollectionView.delegate = self
         postCollectionView.dataSource = self
+        postCollectionView.refreshControl = refreshControl
         
         //Layout setup
         let layout = CHTCollectionViewWaterfallLayout()
@@ -36,15 +42,16 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        self.getHomeFeedList()
+        self.getHomeFeedList(page: String(page))
     }
     
     //MARK: - CollectionView Delegate
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellWidth = collectionView.frame.width
+        let cellWidth = collectionView.bounds.width
 
-        return CGSize(width: cellWidth, height: collectionView.frame.height)
+        return CGSize(width: cellWidth, height: collectionView.bounds.height + CGFloat.random(in: 60...100))
       }
+    
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -73,14 +80,42 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         return cell
     }
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+                let contentHeight = scrollView.contentSize.height
+
+                if (offsetY > contentHeight - scrollView.frame.height * 4) {
+                    self.page = self.page + 1
+                    getHomeFeedList(page: String(page))
+                }
+    }
+    
     // MARK: Private Methods
-    func getHomeFeedList() {
-        let _ = HomeFeedAPI(search: "batman", page: "1") {moviesArr in 
+    func getHomeFeedList(page: String) {
+        let _ = HomeFeedAPI(search: getRandomMovieName(), page: page) {moviesArr in
             if let movies = moviesArr {
-                self.movieList = movies
+                if page != "1" {
+                    self.movieList.append(contentsOf: movies)
+                } else {
+                    self.movieList.removeAll()
+                    self.movieList = movies
+                }
                 self.postCollectionView.reloadData()
             }
         }
+    }
+    
+    func getRandomMovieName() -> String {
+        let movieNames = ["batman", "superman", "spiderman", "ironman", "thor", "hulk", "wonderwoman", "blackwidow", "captainamerica", "aquaman"]
+        let randomIndex = Int(arc4random_uniform(UInt32(movieNames.count)))
+        return movieNames[randomIndex]
+    }
+
+    
+    // MARK: Object
+    @objc func refresh() {
+        getHomeFeedList(page: "1")
+        refreshControl.endRefreshing()
     }
     
 
