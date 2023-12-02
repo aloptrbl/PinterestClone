@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gTV-IL-0wX" customClass="PostCollectionViewCell" customModule="PinterestClone" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="250"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="250"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GGX-CN-ovn">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="250"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O0Y-E3-6sH">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="77.333333333333329"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="R93-4n-r9P">
+                                <rect key="frame" x="0.0" y="77.333333333333329" width="200" height="172.66666666666669"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spider-Man Across The Spider-Verse" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dif-WH-tPT">
+                                        <rect key="frame" x="8" y="8" width="184" height="34"/>
+                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="13"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Wxr-XG-hLA">
+                                        <rect key="frame" x="8" y="48" width="184" height="14.333333333333336"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="142 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HA4-V3-N22">
+                                                <rect key="frame" x="0.0" y="0.0" width="61.333333333333336" height="14.333333333333334"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="11"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Actions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIf-wf-mYs">
+                                                <rect key="frame" x="61.333333333333329" y="0.0" width="61.333333333333329" height="14.333333333333334"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="11"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9F-wR-kpa">
+                                                <rect key="frame" x="122.66666666666664" y="0.0" width="61.333333333333329" height="14.333333333333334"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency." lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMM-cE-fFc">
+                                        <rect key="frame" x="8" y="68.333333333333329" width="184" height="62.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="O0Y-E3-6sH" firstAttribute="leading" secondItem="GGX-CN-ovn" secondAttribute="leading" id="5aZ-zP-KOg"/>
+                            <constraint firstItem="R93-4n-r9P" firstAttribute="leading" secondItem="GGX-CN-ovn" secondAttribute="leading" id="8cv-3G-oZ7"/>
+                            <constraint firstAttribute="trailing" secondItem="O0Y-E3-6sH" secondAttribute="trailing" id="GC0-ee-0L3"/>
+                            <constraint firstItem="O0Y-E3-6sH" firstAttribute="top" secondItem="GGX-CN-ovn" secondAttribute="top" id="Gz4-jF-erz"/>
+                            <constraint firstItem="R93-4n-r9P" firstAttribute="top" secondItem="O0Y-E3-6sH" secondAttribute="bottom" id="VpE-Md-4yg"/>
+                            <constraint firstAttribute="trailing" secondItem="R93-4n-r9P" secondAttribute="trailing" id="aXk-cJ-AX9"/>
+                            <constraint firstAttribute="bottom" secondItem="R93-4n-r9P" secondAttribute="bottom" id="pub-p1-aVc"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="GGX-CN-ovn" secondAttribute="bottom" id="g2L-zO-6jk"/>
+                <constraint firstAttribute="trailing" secondItem="GGX-CN-ovn" secondAttribute="trailing" id="iq5-ED-DAA"/>
+                <constraint firstItem="GGX-CN-ovn" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="v5i-sx-gle"/>
+                <constraint firstItem="GGX-CN-ovn" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="zVT-Ug-wzZ"/>
+            </constraints>
+            <connections>
+                <outlet property="descriptionLabel" destination="KMM-cE-fFc" id="61w-iw-XQp"/>
+                <outlet property="genreLabel" destination="YIf-wf-mYs" id="fxl-UJ-BfI"/>
+                <outlet property="imageView" destination="O0Y-E3-6sH" id="4jD-4F-bFa"/>
+                <outlet property="titleLabel" destination="dif-WH-tPT" id="MWc-o3-3Tn"/>
+                <outlet property="totalWatchingLabel" destination="HA4-V3-N22" id="7Vo-FK-usB"/>
+                <outlet property="yearLabel" destination="U9F-wR-kpa" id="MFt-X4-3Md"/>
+            </connections>
+            <point key="canvasLocation" x="-61.068702290076331" y="-11.267605633802818"/>
+        </collectionViewCell>
+    </objects>
+</document>

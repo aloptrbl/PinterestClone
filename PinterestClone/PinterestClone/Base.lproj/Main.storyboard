@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gTO-tK-UQV">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Explore View Controller-->
+        <scene sceneID="8bI-g0-ItC">
+            <objects>
+                <viewController id="S1I-qi-KFt" userLabel="Explore View Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tHk-TM-tsS">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="7dK-od-RTf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="549-qg-Al9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fpD-pS-yhx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="976" y="2313"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="BCU-Ws-uaP">
+            <objects>
+                <viewController id="KyU-At-Uek" userLabel="Home View Controller" customClass="HomeViewController" customModule="PinterestClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9bo-Qr-YJq" userLabel="Home View">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HgI-RF-8xX">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oP9-oQ-p6B">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="710"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bfT-Ex-gZg">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="" translatesAutoresizingMaskIntoConstraints="NO" id="NFF-FI-CBy" customClass="PostCollectionViewCell" customModule="PinterestClone" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dx6-cY-xEQ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </collectionViewCellContentView>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="oP9-oQ-p6B" secondAttribute="trailing" id="Sq8-06-f7i"/>
+                                    <constraint firstItem="oP9-oQ-p6B" firstAttribute="leading" secondItem="HgI-RF-8xX" secondAttribute="leading" id="kIX-HG-yvC"/>
+                                    <constraint firstAttribute="bottom" secondItem="oP9-oQ-p6B" secondAttribute="bottom" id="nqa-5A-8AM"/>
+                                    <constraint firstItem="oP9-oQ-p6B" firstAttribute="top" secondItem="HgI-RF-8xX" secondAttribute="top" id="rIe-UL-6Eu"/>
+                                </constraints>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gxv-m6-WVA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HgI-RF-8xX" firstAttribute="top" secondItem="gxv-m6-WVA" secondAttribute="top" id="4Ld-yO-nDB"/>
+                            <constraint firstItem="HgI-RF-8xX" firstAttribute="leading" secondItem="gxv-m6-WVA" secondAttribute="leading" id="EKT-3x-U5k"/>
+                            <constraint firstItem="gxv-m6-WVA" firstAttribute="bottom" secondItem="HgI-RF-8xX" secondAttribute="bottom" id="itj-RK-XNc"/>
+                            <constraint firstItem="gxv-m6-WVA" firstAttribute="trailing" secondItem="HgI-RF-8xX" secondAttribute="trailing" id="xDh-5c-S6f"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="vi6-cm-NZP"/>
+                    <connections>
+                        <outlet property="postCollectionView" destination="oP9-oQ-p6B" id="ROf-Yi-6Eq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DEz-cp-veW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="976" y="1705"/>
+        </scene>
+        <!--Main Tab Bar Controller-->
+        <scene sceneID="uTw-DL-ez7">
+            <objects>
+                <tabBarController storyboardIdentifier="MainTabBarController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gTO-tK-UQV" userLabel="Main Tab Bar Controller" customClass="MainTabBarViewController" customModule="PinterestClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6Wb-JY-2R9" userLabel="Main Tab Bar">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <outlet property="mainTabBar" destination="6Wb-JY-2R9" id="Uk2-an-W7Z"/>
+                        <segue destination="KyU-At-Uek" kind="relationship" relationship="viewControllers" id="XpS-eo-sAL"/>
+                        <segue destination="S1I-qi-KFt" kind="relationship" relationship="viewControllers" id="BYP-Dm-D15"/>
+                        <segue destination="QJv-61-0gj" kind="relationship" relationship="viewControllers" id="1Ra-gp-AOM"/>
+                        <segue destination="644-Xg-apc" kind="relationship" relationship="viewControllers" id="8qL-44-2JI"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V5y-yJ-lnA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="72" y="2008"/>
+        </scene>
+        <!--Messages View Controller-->
+        <scene sceneID="p7Y-af-Uqn">
+            <objects>
+                <viewController id="QJv-61-0gj" userLabel="Messages View Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WLx-9D-y0F">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="gPm-hS-DAf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 3" id="fPi-Rm-tCP" userLabel="Item 3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="soc-Ki-4sS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="995" y="2999"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="Tqv-fd-kaQ">
+            <objects>
+                <viewController id="644-Xg-apc" userLabel="Profile View Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Xh-Ks-Bls">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Tn3-3e-e7X"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 4" id="K4D-IY-Ztt" userLabel="Item 4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QVT-N8-DRu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="367" y="3675"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

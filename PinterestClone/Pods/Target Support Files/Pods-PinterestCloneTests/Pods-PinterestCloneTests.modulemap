@@ -1,0 +1,6 @@
+framework module Pods_PinterestCloneTests {
+  umbrella header "Pods-PinterestCloneTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

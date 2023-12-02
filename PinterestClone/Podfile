@@ -1,0 +1,21 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'PinterestClone' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for PinterestClone
+pod 'Alamofire'
+  pod 'Kingfisher', '~> 7.0'
+
+  target 'PinterestCloneTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'PinterestCloneUITests' do
+    # Pods for testing
+  end
+
+end
