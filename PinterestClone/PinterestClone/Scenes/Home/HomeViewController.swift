@@ -52,6 +52,10 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         return CGSize(width: cellWidth, height: collectionView.bounds.height + CGFloat.random(in: 60...100))
       }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+     let mdVc = MovieDetailViewController.init(nibName: "MovieDetailViewController", bundle: nil)
+     self.present(mdVc, animated: true, completion: nil)
+    }
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -106,7 +110,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func getRandomMovieName() -> String {
-        let movieNames = ["batman", "superman", "spiderman", "ironman", "thor", "hulk", "wonderwoman", "blackwidow", "captainamerica", "aquaman"]
+        let movieNames = ["batman", "superman", "spiderman", "ironman", "hulk", "wonderwoman", "blackwidow"]
         let randomIndex = Int(arc4random_uniform(UInt32(movieNames.count)))
         return movieNames[randomIndex]
     }

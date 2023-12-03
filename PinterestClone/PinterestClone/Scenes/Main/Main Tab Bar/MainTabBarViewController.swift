@@ -25,7 +25,7 @@ class MainTabBarViewController: UITabBarController, UITabBarControllerDelegate {
     
     // MARK: Tab Bar
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        handleTabSelection()
+        handleTabSelection(tabBar: tabBar, item: item)
     }
     
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
@@ -73,8 +73,17 @@ class MainTabBarViewController: UITabBarController, UITabBarControllerDelegate {
        }
        
     // This function handles the logic that occurs when a tab is selected.
-       private func handleTabSelection() {
-      
+    private func handleTabSelection(tabBar: UITabBar, item: UITabBarItem) {
+           if let index = tabBar.items?.firstIndex(of: item),
+              let imageView = tabBar.subviews[index + 1].subviews.first as? UIImageView {
+               UIView.animate(withDuration: 0.6) {
+                   imageView.transform = CGAffineTransform(scaleX: 5.25, y: 5.25)
+               } completion: { _ in
+                   UIView.animate(withDuration: 0.6) {
+                       imageView.transform = CGAffineTransform.identity
+                   }
+               }
+           }
        }
 
 }
