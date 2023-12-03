@@ -54,6 +54,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
      let mdVc = MovieDetailViewController.init(nibName: "MovieDetailViewController", bundle: nil)
+        mdVc.movie = movieList[indexPath.row]
      self.present(mdVc, animated: true, completion: nil)
     }
     

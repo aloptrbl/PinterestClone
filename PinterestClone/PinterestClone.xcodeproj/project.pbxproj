@@ -34,6 +34,8 @@
 		D5FFA8C22B1B971B002F4707 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FFA8C02B1B971B002F4707 /* MovieDetailViewController.swift */; };
 		D5FFA8C32B1B971B002F4707 /* MovieDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5FFA8C12B1B971B002F4707 /* MovieDetailViewController.xib */; };
 		D5FFA8C52B1C2789002F4707 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FFA8C42B1C2789002F4707 /* ViewController.swift */; };
+		D5FFA8C72B1C2C4A002F4707 /* MovieDetailAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FFA8C62B1C2C4A002F4707 /* MovieDetailAPI.swift */; };
+		D5FFA8C92B1C2CF9002F4707 /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FFA8C82B1C2CF9002F4707 /* MovieDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,8 @@
 		D5FFA8C02B1B971B002F4707 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		D5FFA8C12B1B971B002F4707 /* MovieDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailViewController.xib; sourceTree = "<group>"; };
 		D5FFA8C42B1C2789002F4707 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D5FFA8C62B1C2C4A002F4707 /* MovieDetailAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailAPI.swift; sourceTree = "<group>"; };
+		D5FFA8C82B1C2CF9002F4707 /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
 		ED6CBF905646E6F6A521240D /* Pods-PinterestClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinterestClone.release.xcconfig"; path = "Target Support Files/Pods-PinterestClone/Pods-PinterestClone.release.xcconfig"; sourceTree = "<group>"; };
 		F27587B7769804CECC3245E5 /* Pods_PinterestClone_PinterestCloneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinterestClone_PinterestCloneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -197,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				D5FFA8BB2B1B4005002F4707 /* Movie.swift */,
+				D5FFA8C82B1C2CF9002F4707 /* MovieDetail.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -206,6 +211,7 @@
 			children = (
 				D5FFA8AF2B1ADFA8002F4707 /* BaseAPI.swift */,
 				D5FFA8BD2B1B6ED8002F4707 /* HomeFeedAPI.swift */,
+				D5FFA8C62B1C2C4A002F4707 /* MovieDetailAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -560,8 +566,10 @@
 				D5FFA8BC2B1B4005002F4707 /* Movie.swift in Sources */,
 				D5C0A3552B1A008E008C3BCA /* AppDelegate.swift in Sources */,
 				D5C0A35F2B1A008E008C3BCA /* PinterestClone.xcdatamodeld in Sources */,
+				D5FFA8C92B1C2CF9002F4707 /* MovieDetail.swift in Sources */,
 				D5FFA8BE2B1B6ED8002F4707 /* HomeFeedAPI.swift in Sources */,
 				D556CC6C2B1A3325004C0C5E /* MainTabBarViewController.swift in Sources */,
+				D5FFA8C72B1C2C4A002F4707 /* MovieDetailAPI.swift in Sources */,
 				D5C0A3572B1A008E008C3BCA /* SceneDelegate.swift in Sources */,
 				D556CC7D2B1ADC8E004C0C5E /* ExploreViewController.swift in Sources */,
 				D556CC812B1ADCAE004C0C5E /* ProfileViewController.swift in Sources */,

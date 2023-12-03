@@ -46,7 +46,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="" translatesAutoresizingMaskIntoConstraints="NO" id="NFF-FI-CBy" customClass="PostCollectionViewCell" customModule="PinterestClone" customModuleProvider="target">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" reuseIdentifier="" translatesAutoresizingMaskIntoConstraints="NO" id="NFF-FI-CBy" customClass="PostCollectionViewCell" customModule="PinterestClone" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dx6-cY-xEQ">
@@ -125,7 +125,7 @@
         <!--Profile View Controller-->
         <scene sceneID="Tqv-fd-kaQ">
             <objects>
-                <viewController id="644-Xg-apc" userLabel="Profile View Controller" sceneMemberID="viewController">
+                <viewController id="644-Xg-apc" userLabel="Profile View Controller" customClass="ProfileViewController" customModule="PinterestClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Xh-Ks-Bls">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
